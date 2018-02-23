@@ -750,7 +750,7 @@ function pmproap_profile_fields_update() {
 	if ( isset( $_REQUEST['new_pmproap_posts'] ) || isset( $_REQUEST['remove_pmproap_posts'] ) ) {
 		// get the user id
 		global $wpdb, $current_user, $user_ID;
-		get_currentuserinfo();
+		wp_get_current_user();
 
 		if ( ! empty( $_REQUEST['user_id'] ) ) {
 			$user_ID = intval( $_REQUEST['user_id'] );
